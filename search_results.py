@@ -8,8 +8,8 @@ headers = {
         "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36"
     }
-username = "abe9r9g267ndixi"
-password = "mk72n2ajsuco98g"
+username = "your_username"
+password = "your_password"
 proxy = "rp.proxyscrape.com:6060"
 proxy_auth = "{}:{}@{}".format(username, password, proxy)
 proxies = {
@@ -22,13 +22,13 @@ if no_of_results<100:
     soup = bs4.BeautifulSoup(req_result.text,'lxml')
     for res in  soup.select('.tF2Cxc'):
      
-      print(res.select_one('.DKV0Md').text)
-      print(res.select_one('.yuRUbf a')['href'])
+      print(res.select_one('.DKV0Md').text) 
+      print(res.select_one('.yuRUbf a')['href']) 
       try:
-          print(res.select_one('.hJNv6b').text)
-      except:
+          print(res.select_one('.hJNv6b').text)        
+      except:                                          
           print("------ description not found ------")
-      print("--------------------")
+      print("--------------------")                     
       
 else:
    for i in range(int(no_of_results/100)):
